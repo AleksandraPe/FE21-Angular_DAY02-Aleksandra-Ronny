@@ -1,0 +1,35 @@
+<p class="fs-4">Get in touch with us</p>
+<hr>
+<form class="row g-3" [formGroup]="contact" (ngSubmit)="onSubmit()">
+    <div class="col-md-6">
+        <label for="firstName" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="firstName" placeholder="Jane" formControlName="firstName">
+    </div>
+    <div class="col-md-6">
+        <label for="lastName" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="lastName" placeholder="Doe" formControlName="lastName">
+    </div>
+    <div class="col-md-10">
+        <label for="street" class="form-label">Street</label>
+        <input type="text" class="form-control" id="street" placeholder="Main St" formControlName="street">
+    </div>
+    <div class="col-md-2">
+        <label for="number" class="form-label">No</label>
+        <input type="number" class="form-control" id="number" placeholder="23" formControlName="streetNo">
+    </div>
+    <div class="col-md-8">
+        <label for="city" class="form-label">City</label>
+        <input type="text" class="form-control" id="city" placeholder="Vienna" formControlName="city">
+    </div>
+    <div class="col-md-4">
+        <label for="zip" class="form-label">Zip</label>
+        <input type="text" class="form-control" id="zip" placeholder="1010" formControlName="zip">
+    </div>
+    <div class="col">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="jane.doe@acme.com" formControlName="email">
+    </div>
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>

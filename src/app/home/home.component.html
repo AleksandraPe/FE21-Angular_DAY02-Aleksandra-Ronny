@@ -1,0 +1,13 @@
+<div class="row row-cols-1 row-cols-lg-3 g-4">
+    <div *ngFor="let car of cars" class="col">
+        <div class="card h-100">
+        <img src="{{car.img}}" class="card-img-top" alt="image of {{car.brand}} {{car.type}}">
+        <div class="card-body">
+            <h5 class="card-title">{{car.brand}} {{car.type}}</h5>
+            <div><i class="fas fa-chair"></i><span>{{car.seats}}</span></div>
+            <div><i class="fas fa-cogs"></i><span>{{car.gear}}</span></div>
+            <div><i class="fas fa-tag"></i><span>{{car.class}}</span></div>
+        </div>
+        </div>
+    </div>
+
