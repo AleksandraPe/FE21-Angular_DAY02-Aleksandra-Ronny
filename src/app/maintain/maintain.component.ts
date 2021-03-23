@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Car } from '../car';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { HomeComponent } from '../home/home.component';
+import { CarService } from '../car.service';
 
 @Component({
   selector: 'app-maintain',
@@ -19,10 +19,12 @@ export class MaintainComponent implements OnInit {
     img: new FormControl("", Validators.required),
   })
 
-  constructor() { }
+  constructor(private carService: CarService) { }
 
   onSubmit(){
     if (this.car.valid) {
+      let newCar : Car = {id: Math.floor(Math.random()*1000), brand: this.car.value.brand, type: this.car.value.type, seats: this.car.value.seats, gear: this.car.value.gears, class: this.car.value.class, img: this.car.value.img}
+      this.carService.addCar(newCar);
     }
   }
 
