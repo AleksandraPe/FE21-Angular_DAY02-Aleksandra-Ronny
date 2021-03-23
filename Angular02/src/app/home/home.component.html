@@ -1,0 +1,8 @@
+<div class="container-fluid">
+  <div class="row row-cols-3 mt-5">
+    <div *ngFor="let car of cars" class="mb-4">
+        <img src="{{car.carImage}}">
+        <p class="fw-bolder fs-2">{{car.carName}}</p>
+      </div>
+  </div>
+</div>
