@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Car } from '../car';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

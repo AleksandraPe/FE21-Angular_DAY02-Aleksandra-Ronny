@@ -1,1 +1,41 @@
-<p>maintain works!</p>
+<p class="fs-4">Add new cars</p>
+<hr>
+<form class="row g-3" [formGroup]="car" (ngSubmit)="onSubmit()">
+    <div class="col-md-6">
+        <label for="brand" class="form-label">Brand</label>
+        <input type="text" class="form-control" id="brand" placeholder="BMW" formControlName="brand">
+    </div>
+    <div class="col-md-6">
+        <label for="type" class="form-label">Type</label>
+        <input type="text" class="form-control" id="type" placeholder="320" formControlName="type">
+    </div>
+    <div class="col-md-4">
+        <label for="seats" class="form-label">Seats</label>
+        <input type="number" class="form-control" id="seats" placeholder="4" formControlName="seats">
+    </div>
+    <div class="col-md-4">
+        <label for="gear" class="form-label">Transmission</label>
+        <select id="gear" class="form-select" formControlName="gear">
+            <option selected>Automatic</option>
+            <option>Manual</option>
+        </select>
+    </div>
+    <div class="col-md-4">
+        <label for="class" class="form-label">Class</label>
+        <select id="class" class="form-select" formControlName="class">
+            <option selected>Economy</option>
+            <option>Standard</option>
+            <option>Premium</option>
+            <option>Luxury</option>
+            <option>Van</option>
+        </select>
+    </div>
+    <div class="col">
+        <label for="img" class="form-label">URL to Image</label>
+        <input type="text" class="form-control" id="img" placeholder="https://www.acme.com/image.jpg" formControlName="img">
+    </div>
+    
+    <div class="col-12">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>
